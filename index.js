@@ -44,6 +44,7 @@ const toolNode = new ToolNode(tools)
 
 const llm = new ChatGroq({
     model:"openai/gpt-oss-120b", //llama-3.1-8b-instant openai/gpt-oss-120b
+    apiKey:process.env.GROQ_API_KEY,
     temperature:0,
     maxRetries:2,
 }).bindTools(tools)
